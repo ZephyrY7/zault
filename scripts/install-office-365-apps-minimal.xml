@@ -5,7 +5,6 @@
             <ExcludeApp ID="Access" />
             <ExcludeApp ID="Lync" />
             <ExcludeApp ID="Groove" />
-            <ExcludeApp ID="OneNote" />
             <ExcludeApp ID="OneDrive" />
             <ExcludeApp ID="Outlook" />
             <ExcludeApp ID="Publisher" />
