@@ -4,7 +4,7 @@ personal scoop bucket
 ## prerequisite
 
 - [scoop](https://scoop.sh/)
-  follow instructions from website to install scoop 
+  follow instructions from website to install scoop
 
 ### add zault to bucket
 
