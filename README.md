@@ -1,23 +1,19 @@
-# Scoop Bucket Template
+# zault
+personal scoop bucket
 
-<!-- Uncomment the following line after replacing placeholders -->
-<!-- [![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml) -->
+## prerequisite
 
-Template bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
+- [Scoop](https://scoop.sh/)
+  follow instructions from website to install scoop 
 
-How do I install these manifests?
----------------------------------
+### add zault to bucket
 
-To add this bucket, run `scoop bucket add <bucketname> https://github.com/<username>/<bucketname>`. To install, do `scoop install <manifest>`.
+use this command:
 
-How do I contribute new manifests?
-----------------------------------
+`scoop bucket add zault https://github.com/ZephyrY7/zault.git`
 
-To make a new manifest contribution, please read the [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md).
+### install apps from this bucket
 
-----
+use this command:
 
-#### To use this template
-
-- Modify the Readme.md and the bin/auto-pr.ps1 files accordingly.
-- Enable GitHub Actions for this repository.
+`scoop install zault/<appname>`
