@@ -1,6 +1,6 @@
 param(
     # overwrite upstream param
-    [String]$upstream = "ZephyrY7/zault:main"
+    [String]$upstream = "ZephyrY7/zault:master"
 )
 
 if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
