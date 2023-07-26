@@ -6,14 +6,14 @@
       "url": "https://discord.com/app"
     }
   },
-  "bin": "index.html",
+  "bin": "app",
   "homepage": "https://discord.com/",
   "license": "https://discord.com/licenses",
   "extract_dir": "",
   "shortcuts": [
     {
-      "Name": "Discord",
-      "Icon": "index.html",
+      "Name": "Discord Web",
+      "Icon": "app",
       "Url": "https://discord.com/app"
     }
   ]
