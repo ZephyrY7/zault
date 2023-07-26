@@ -3,6 +3,7 @@
   "description": "Discord | Your Place to Talk and Hang Out",
   "homepage": "https://discord.com/",
   "license": "https://discord.com/licenses",
+  "url": "https://discord.com/app",
   "installer": {
     "script": [
       "$targetURL = \"https://discord.com/app\"",
