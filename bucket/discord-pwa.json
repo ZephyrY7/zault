@@ -3,5 +3,10 @@
   "description": "Discord | Your Place to Talk and Hang Out",
   "homepage": "https://discord.com/",
   "license": "https://discord.com/licenses",
-  "bin": "Discord.Ink"
+  "installer": {
+    "script": [
+      "$targetURL = \"https://discord.com/app\"",
+      "(New-Object -ComObject WScript.Shell).CreateShortcut(\"$dir)\\Discord Web.lnk\").TargetPath = \"https://discord.com/app\""
+    ]
+  }
 }
