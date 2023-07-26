@@ -3,5 +3,5 @@
   "description": "Discord | Your Place to Talk and Hang Out",
   "homepage": "https://discord.com/",
   "license": "https://discord.com/licenses",
-  "bin": "https://discord.com/app"
+  "bin": "Discord.Ink"
 }
