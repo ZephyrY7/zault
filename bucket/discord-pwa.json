@@ -1,20 +1,7 @@
 {
   "version": "1.0",
-  "url": "https://discord.com/app",
-  "architecture": {
-    "64bit": {
-      "url": "https://discord.com/app"
-    }
-  },
-  "bin": "app",
+  "description": "Discord | Your Place to Talk and Hang Out",
   "homepage": "https://discord.com/",
   "license": "https://discord.com/licenses",
-  "extract_dir": "",
-  "shortcuts": [
-    {
-      "Name": "Discord Web",
-      "Icon": "app",
-      "Url": "https://discord.com/app"
-    }
-  ]
+  "bin": "https://discord.com/app"
 }
