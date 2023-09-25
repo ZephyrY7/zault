@@ -20,11 +20,11 @@
         "script": [
             "# Using Start-Process as a workaround because the installer will not work properly when args are quoted (e.g. \"`\"/S`\"\")",
             "# Move the installer to the upper directory to avoid the error \"The installatiom directory is not empty.\"",
-            "Move-Item \"$dir\\setup.exe\" \"$dir\\..\\setup.exe\" | Out-Null",
-            "Start-Process \"$dir\\..\\setup.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
+            "Move-Item \"$dir\\Miniconda3-latest-Windows-x86_64.exe\" \"$dir\\..\\Miniconda3-latest-Windows-x86_64.exe\" | Out-Null",
+            "Start-Process \"$dir\\..\\Miniconda3-latest-Windows-x86_64.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
         ]
     },
-    "post_install": "Remove-Item \"$dir\\..\\setup.exe\" -Force | Out-Null",
+    "post_install": "Remove-Item \"$dir\\..\\Miniconda3-latest-Windows-x86_64.exe\" -Force | Out-Null",
     "uninstaller": {
         "script": [
             "Start-Process \"$dir\\Uninstall-Miniconda3.exe\" -ArgumentList '/S' -Wait | Out-Null",
