@@ -1,7 +1,7 @@
 {
-    "version": "24.1.2",
+    "version": "24.1.2-0",
     "description": "A cross-platform, Python-agnostic binary package manager",
-    "homepage": "https://conda.io/miniconda.html",
+    "homepage": "https://docs.anaconda.com/free/miniconda/",
     "license": "BSD-3-Clause",
     "notes": [
         "From 4.6.0, conda has built the support for Cmd, Powershell or other shells.",
@@ -11,7 +11,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe",
+            "url": "https://repo.anaconda.com/miniconda/Miniconda3-py312_24.1.2-0-Windows-x86_64.exe#/setup.exe",
             "hash": "ff53a36b7024f8398cbfd043020f1f662cd4c5c2095c0007ddb4348aa5459375"
         }
     },
@@ -20,11 +20,11 @@
         "script": [
             "# Using Start-Process as a workaround because the installer will not work properly when args are quoted (e.g. \"`\"/S`\"\")",
             "# Move the installer to the upper directory to avoid the error \"The installatiom directory is not empty.\"",
-            "Move-Item \"$dir\\Miniconda3-latest-Windows-x86_64.exe\" \"$dir\\..\\Miniconda3-latest-Windows-x86_64.exe\" | Out-Null",
-            "Start-Process \"$dir\\..\\Miniconda3-latest-Windows-x86_64.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
+            "Move-Item \"$dir\\setup.exe\" \"$dir\\..\\setup.exe\" | Out-Null",
+            "Start-Process \"$dir\\..\\setup.exe\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait | Out-Null"
         ]
     },
-    "post_install": "Remove-Item \"$dir\\..\\Miniconda3-latest-Windows-x86_64.exe\" -Force | Out-Null",
+    "post_install": "Remove-Item \"$dir\\..\\setup.exe\" -Force | Out-Null",
     "uninstaller": {
         "script": [
             "Start-Process \"$dir\\Uninstall-Miniconda3.exe\" -ArgumentList '/S' -Wait | Out-Null",
@@ -46,17 +46,17 @@
     ],
     "persist": "envs",
     "checkver": {
-        "url": "https://docs.conda.io/projects/miniconda/en/latest/",
-        "regex": "Latest - Conda ([\\d.-]+) Python"
+        "url": "https://docs.anaconda.com/free/miniconda/miniconda-other-installer-links/",
+        "regex": "Miniconda3-py(?<py>\\d+)_([\\d.-]+)-Windows"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe"
+                "url": "https://repo.anaconda.com/miniconda/Miniconda3-py$matchPy_$version-Windows-x86_64.exe#/setup.exe"
             }
         },
         "hash": {
-            "url": "https://docs.conda.io/en/latest/miniconda.html",
+            "url": "https://docs.anaconda.com/free/miniconda/miniconda-other-installer-links/",
             "regex": "(?sm)$basename.*?>$sha256<"
         }
     }
