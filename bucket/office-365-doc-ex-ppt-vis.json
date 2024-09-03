@@ -12,17 +12,17 @@
     "pre_install": [
         "$scriptdir = \"$bucketsdir\\zault\\scripts\"",
         "if ($architecture -eq '64bit') {",
-        "     Copy-Item \"$scriptdir\\install-office-365-apps-minimal.xml\" \"$dir\\\"",
+        "     Copy-Item \"$scriptdir\\install-office-365-apps.xml\" \"$dir\\\"",
         "}",
         "elseif ($architecture -eq '32bit') {",
-        "    (Get-Content \"$scriptdir\\install-office-365-apps-minimal.xml\").Replace('64', '32') | Set-Content -Path \"$dir\\install-office-365-apps-minimal.xml\"",
+        "    (Get-Content \"$scriptdir\\install-office-365-apps.xml\").Replace('64', '32') | Set-Content -Path \"$dir\\install-office-365-apps.xml\"",
         "}",
         "Copy-Item \"$scriptdir\\uninstall-office-365-apps.xml\" \"$dir\\\""
     ],
     "installer": {
         "script": [
             "Start-Process -Wait 7z1900-helper -ArgumentList @('x', '-bso0', \"`\"$dir\\dl.7z_`\"\", \"`\"-o$dir`\"\")",
-            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"`\"$dir\\install-office-365-apps-minimal.xml`\"\")"
+            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('/configure', \"`\"$dir\\install-office-365-apps.xml`\"\")"
         ]
     },
     "uninstaller": {
