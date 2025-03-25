@@ -1,5 +1,5 @@
 {
-    "version": "2.25.1",
+    "version": "0.12.64",
     "description": "Family of client software, server software and services developed by Microsoft. This package only includes Word, Excel, Powerpoint and Onenote.",
     "homepage": "https://www.office.com/",
     "license": {
@@ -8,7 +8,7 @@
     },
     "depends": "7zip19.00-helper",
     "url": "https://download.microsoft.com/download/#/dl.7z_",
-    "hash": "e64498ed74a8369d336241802f333680fbcea980bc21d6d793f4ab33bb38291f",
+    "hash": "e4522c7687e3f3684cdd8c250527b2ea52442f93df93031d886f1cf4f29f2ab7",
     "pre_install": [
         "$scriptdir = \"$bucketsdir\\zault\\scripts\"",
         "if ($architecture -eq '64bit') {",
