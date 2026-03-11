@@ -1,12 +1,12 @@
 {
-    "version": "2026.1-beta1",
+    "version": "2026.1-beta2",
     "homepage": "https://mullvad.net/en/",
     "description": "The official desktop client for Mullvad VPN, a privacy-respecting VPN service.",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mullvad/mullvadvpn-app/releases/download/2026.1-beta1/MullvadVPN-2026.1-beta1.exe#/setup.exe",
-            "hash": "6cd69fe620d7f5a6dbc0a3f0ba953b83566ceec5af38f98a186d07aa6a9215bc"
+            "url": "https://github.com/mullvad/mullvadvpn-app/releases/download/2026.1-beta2/MullvadVPN-2026.1-beta2.exe#/setup.exe",
+            "hash": "f8b0b451bc94f2cff4b3bbbc7982509140a4336bef850cd8ee0411c8b664b639"
         }
     },
     "pre_install": [
